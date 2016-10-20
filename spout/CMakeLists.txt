@@ -1,0 +1,39 @@
+CMAKE_MINIMUM_REQUIRED (VERSION 2.8)
+SET(CMAKE_CXX_COMPILER "g++")
+SET(CMAKE_C_COMPILER "gcc")
+
+#工程名称
+PROJECT(spout)
+
+#编译参数
+SET(CMAKE_CXX_FLAGS "-g -std=c++11")
+
+#库引用
+SET(LIBS jsoncpp)
+
+#宏定义
+#ADD_DEFINITIONS(-D_LINUX_VERSION)
+
+#附加包含目录
+AUX_SOURCE_DIRECTORY(../public SRC_LIST)
+AUX_SOURCE_DIRECTORY(. SRC_LIST)
+#AUX_SOURCE_DIRECTORY(src/ustd SRC_LIST)
+
+#排除文件
+#LIST(REMOVE_ITEM SRC_LIST ../thread/demo.cpp)
+
+#引用目录
+INCLUDE_DIRECTORIES(../public)
+INCLUDE_DIRECTORIES(.)
+
+#附加库目录
+#LINK_DIRECTORIES(src/hiredis)
+
+#应用程序编译
+ADD_EXECUTABLE(spout ${SRC_LIST})
+
+#动态库编译
+#ADD_LIBRARY(_net_client SHARED ${SRC_LIST})	
+
+#链接库设置
+TARGET_LINK_LIBRARIES(spout ${LIBS})
