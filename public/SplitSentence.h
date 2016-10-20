@@ -154,16 +154,6 @@ public:
 	}
 
 private:
-	std::string guid() 
-	{
-		std::string uuid;
-		std::ifstream fin("/proc/sys/kernel/random/uuid");
-		std::getline(fin, uuid);
-		fin.close();
-		return uuid;
-	}
-
-private:
 	vector<string> sentences_;
 	int len_;
 };
