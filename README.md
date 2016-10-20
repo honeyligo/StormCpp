@@ -9,6 +9,7 @@ http://demeter.inf.ed.ac.uk/cross/stormcpp.html
 
     
 the cause is since the 0.9.3 storm version, we have to call the bolt synchronize method when we receive a heartbeat tuple.
+http://stackoverflow.com/questions/30072570/shellbolt-anchored-onto-after-ack-fail
 
 ```
     class Tuple
