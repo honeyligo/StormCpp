@@ -1,5 +1,5 @@
 # StormCpp
-a sampe descript how to implement multilang of storm in C++. this code is updated from Sasa Petrovic's first contribution.
+a sampe descript how to implement multilang of storm in C++. this code is updated from Sasa Petrovic's first contribution, including spout and bolt.
 http://demeter.inf.ed.ac.uk/cross/stormcpp.html
 
 # update
